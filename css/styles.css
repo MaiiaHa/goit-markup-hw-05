@@ -143,13 +143,22 @@ img {
 }
 
 /* Синя лінія підкреслення */
-/* 
-.current::after {
-  content: '';
-  outline: 4px solid tomato; 
-} */
 
-/* header-nav list outline */
+.header-nav-list {
+  position: relative;
+}
+.current::after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 
 /* MAIN SECTION (FIRST SECTION) */
 .main-section {

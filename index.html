@@ -59,7 +59,19 @@
     <section class="main-section">
       <div class="container">
         <h1 class="main-text">Ефективні рішення для вашого бізнесу</h1>
-        <button class="main-btn btn" type="button">Замовити послугу</button>
+        <button class="main-btn btn" type="button" data-modal-open>Замовити послугу</button>
+
+        <!-- модальне вікно замовити послугу -->
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p>Залиште свої дані, ми вам передзвонимо</p>
+            <button data-modal-close>Закрыть</button>
+          </div>
+        </div>
+
+
+
       </div>
     </section>
 
@@ -310,6 +322,8 @@
     </div>
   </footer>
 
+  <!-- підключили скріпт модального вікна -->
+  <script src="./js/modal.js"></script>
 
 </body>
 
