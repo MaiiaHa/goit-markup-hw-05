@@ -71,6 +71,27 @@ img {
 .current {
   color: var(--accent-color);
 }
+
+/* ____________________плавні переходи hover________________ */
+.logo,
+.header-nav-link,
+.header-link,
+.footer-logo,
+.footer-link,
+.address-link,
+.main-btn,
+.modal-btn,
+.works-btn,
+.works-link,
+.social-link,
+.footer-social-link,
+.clients-link {
+  transition-property: color, fill, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* ____________________плавні переходи hover_________________ */
+
 .link {
   text-decoration: none; /* прибирає підкреслення посилань. Звичайний текст. */
 }
@@ -207,7 +228,7 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-background-color);
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   border-radius: 4px;
   padding: 10px 32px; /* відступи тексту на кнопці */
   text-align: center;
@@ -221,7 +242,7 @@ img {
 .main-btn:focus,
 .modal-btn:hover,
 .modal-btn:focus {
-  background: #188ce8;
+  background-color: #188ce8;
   /* background-image: radial-gradient(circle, rgba(33, 150, 243, 1) 0%, rgba(175, 177, 184, 1) 100%); */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -382,13 +403,13 @@ img {
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
-  background: var(--section-color);
+  background-color: var(--section-color);
 }
 .team-list {
   display: flex;
 }
 .team-item {
-  background: var(--main-background-color);
+  background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -472,14 +493,14 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
-  background: var(--section-color);
+  background-color: var(--section-color);
   color: var(--main-font-color);
   border: none;
 }
 .works-btn:active,
 .works-btn:hover,
 .works-btn:focus {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--main-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -517,6 +538,8 @@ img {
 .works-description {
   position: absolute;
   visibility: hidden;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
   /* overflow: hidden; */
 }
 .works-link:hover .works-description {
@@ -531,6 +554,8 @@ img {
   color: var(--main-background-color);
 
   padding: 63px 24px;
+
+  transform: translateY(0);
   /* transition: 250ms; */
 
   /* transform: translateY(-0%); */
@@ -591,7 +616,7 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background: var(--footer-font);
+  background-color: var(--footer-font);
 }
 .footer-address {
   margin-top: 20px;
