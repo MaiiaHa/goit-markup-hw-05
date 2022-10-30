@@ -1,9 +1,11 @@
 /* GENERAL STYLES */
 :root {
   --main-background-color: #ffffff;
+  --additional-font-color: #ffffff;
   --accent-color: #2196f3;
   --accent-color-cards: rgba(33, 150, 243, 0.9);
   --footer-font: #2f303a; /* колір першої секції постера і футера  */
+  --services-font-cl: rgba(47, 48, 58, 0.8);
   --main-font-color: #212121; /* основний колір тексту */
   --secondary-font-color: #757575;
   --section-color: #f5f4fa; /*  цвет секції наша команда */
@@ -384,6 +386,9 @@ img {
 .services-list {
   display: flex;
 }
+.services-item {
+  position: relative;
+}
 .services-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -398,7 +403,25 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-font-color);
 }
+.services-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
 
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  padding-top: 27px;
+
+  color: var(--additional-font-color);
+  background-color: var(--services-font-cl);
+}
 /* TEAM SECTION */
 .team {
   padding-top: 94px;
@@ -533,14 +556,13 @@ img {
 
 .description {
   position: relative;
-  /* transition: transform 250ms ease; */
+  overflow: hidden;
 }
 .works-description {
   position: absolute;
   visibility: hidden;
   transform: translateY(100%);
   transition: transform 250ms ease;
-  /* overflow: hidden; */
 }
 .works-link:hover .works-description {
   position: absolute;
@@ -556,9 +578,6 @@ img {
   padding: 63px 24px;
 
   transform: translateY(0);
-  /* transition: 250ms; */
-
-  /* transform: translateY(-0%); */
 }
 
 /* ___________________________________________________________ */
