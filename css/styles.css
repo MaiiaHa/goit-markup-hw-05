@@ -418,6 +418,7 @@ img {
   text-transform: uppercase;
 
   padding-top: 27px;
+  padding-bottom: 27px;
 
   color: var(--additional-font-color);
   background-color: var(--services-font-cl);
