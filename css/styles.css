@@ -597,7 +597,7 @@ img {
 .works-description {
   /* position: absolute; */
   /* visibility: hidden; */
-  /* transform: translateY(100%); */
+  transform: translateY(100%);
 
   position: absolute;
   top: 0;
